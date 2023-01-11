@@ -3,6 +3,8 @@ import {redirect} from "react-router-dom"
 const URL = "https://portfolio-backend-rhm7.onrender.com"
 
 export const createProject = async ({request}) => {
+    const variable = {request}
+    console.log(variable)
     const formData = await request.formData()
     const newProject = {
         name: formData.get("name"),
